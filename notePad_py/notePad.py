@@ -218,6 +218,8 @@ def saveFile(event = None):
         else :
             url = filedialog.asksaveasfile(mode = 'w', defaultextension = '.txt',
                                            filetypes = (('Text file', '*.txt'),('All files', '*.*')))
+            url.write(content)
+            url.close()
     except:
         return
 
@@ -228,7 +230,7 @@ def saveAs(event = None):
         url = filedialog.asksaveasfile(mode = 'w', defaultextension = '.txt',
                                        filetypes = (('Text file', '*.txt'),('All files', '*.*')))
         url.write(content)
-        url.close
+        url.close()
     except:
         return
 
